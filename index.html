@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <!--underscore.js-->
+    <script src="lib/underscore/underscore-min.js">   </script>
+    <!--mustache.js -->
+    <script src="lib/mustache/mustache.js">     </script>
+    <!--jquery + ui-->
+    <script src="lib/jqueryui/jquery-1.8.3.min.js">  </script>
+    <script src="lib/jqueryui/jquery-ui-1.9.2.custom.min.js">   </script>
+    <link rel="stylesheet" href="lib/jqueryui/jquery-ui-1.9.2.custom.min.css">
+    <!--bootstrap    -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"> </script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!--leaflet-->
+    <script src="lib/leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css"><!--[if lt IE 8]>
+    <link rel="stylesheet" href="lib/leaflet/leaflet.ie.css"><![endif]-->
+    <!--leaflet markercluster -->
+    <script src="lib/leaflet-markercluster/leaflet.markercluster.js">  </script>
+    <link rel="stylesheet" href="lib/leaflet-markercluster/MarkerCluster.css">
+    <link rel="stylesheet" href="lib/leaflet-markercluster/MarkerCluster.Default.css"><!--[if lt IE 8]>
+    <link rel="stylesheet" href="lib/leaflet-markercluster/MarkerCluster.Default.ie.css"><![endif]-->
+    <!--leaflet PIP-->
+    <script src="lib/leaflet-pip/leaflet-pip.min.js"></script>
+    <!--d3, crossfiler, dc    -->
+    <script src="lib/dc/d3.min.js"></script>
+    <script src="lib/dc/crossfilter.min.js"></script>
+    <script src="lib/dc/dc.min.js"> </script>
+    <link rel="stylesheet" href="lib/dc/dc.css">
+    <!--geocoder-->
+    <script src="lib/geocoder/geocoder.js">    </script>
+    <!--wordcloud library-->
+    <script src="lib/d3-cloud/d3.layout.cloud.min.js"></script>
+    <!--hashing-->
+    <script src="lib/hashing/murmurhash3_gc.js"></script>
+    <!--data-->
+    <!--script(src="http://jeroenooms.github.io/lausd-data/geojson/la_county.json") -->
+    <!--script(src="lib/geojson/la_county_simplified.min.json") -->
+    <!--application   -->
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/snack.css">
+  </head>
+  <body>
+    <div id="buttonpanel">
+      <!-- <button id="timeseriesbutton" data-toggle="button" data-panel="bottompanel" class="btn widgetbutton"> <img src="images/bars.png" alt="bar charts"></button> -->
+      <button id="piechartbutton" data-toggle="button" data-panel="piepanel" class="btn widgetbutton"> <img src="images/piechart.png" alt="pie charts"></button>
+      <!-- <button id="histbutton" data-toggle="button" data-panel="histpanel" class="btn widgetbutton"> <img src="images/bars2.png" alt="health chart"></button> -->
+      <button id="wcbutton" data-toggle="button" data-panel="wcpanel" class="btn widgetbutton"> <img src="images/wc.png" alt="wordclouds"></button>
+      <!-- <button id="photobutton" data-toggle="button" data-panel="photopanel" class="btn widgetbutton"> <img src="images/camera.png" alt="thumbnails"></button> -->
+      <!-- <button id="helpbutton" data-toggle="button" data-panel="helppanel" class="btn widgetbutton"> <img src="images/help.png" alt="thumbnails"></button> -->
+      <button id="mapbutton" data-toggle="button" data-panel="map" class="btn widgetbutton"> <img src="images/maps.png" alt="thumbnails"></button>
+    </div>
+    <div id="infodiv">   </div>
+    <div id="widgets"></div>
+    <div id="loadinganimation"><img src="images/spinner.gif" alt="loading"></div>
+    <div id="map"></div>
+    <div id="photopanel" class="well chartpanel">
+      <div id="imagelist"></div><a id="prevthumbs" href="#" class="hide left carousel-control">‹</a><a id="nextthumbs" href="#" class="hide right carousel-control">›    </a>
+    </div>
+    <div id="responsemodal" class="modal hide fade">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+        <h3>Snacking Entry</h3>
+      </div>
+      <div class="modal-body">
+        <div id="modalphoto"><img id="resphoto" src="images/nophoto.jpg" alt="modal photo" class="img-rounded"><a id="nextitem" href="#" class="left carousel-control">‹</a><a id="previtem" href="#" class="right carousel-control">›</a></div>
+      </div>
+      <div class="modal-footer">
+        <table id="responsetable" class="table table-condensed">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Response</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="wcpanel" class="chartpanel"></div>
+    <div id="bottompanel" class="chartpanel"> </div>
+    <div id="piepanel" class="well chartpanel"></div>
+    <div id="histpanel" class="chartpanel"></div>
+  </body>
+</html>

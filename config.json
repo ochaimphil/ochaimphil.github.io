@@ -1,0 +1,78 @@
+{
+	"title" : "3W Dashboard",
+	"data" : {
+		"url" : "data/3w_data.csv"
+	},
+	"item_main" : "3W",	
+	"modal": [ 
+		{
+			"title" : "Organization",
+			"item" : "org_abbr"
+		},
+		{
+			"title" : "sector",
+			"item" : "sector"
+		},
+		{
+			"title" : "status",
+			"item" : "status"
+		}	
+	],
+	"piecharts" : [
+		{
+			"title" : "Cluster",
+			"item" : "sector"			
+		},
+		{
+			"title" : "Status",
+			"item" : "status"
+		}
+	], 
+	"wordclouds" : [
+		{
+			"title" : "Province",
+			"item" : "prov"
+		},
+		{
+			"title" : "Municipality",
+			"item" : "municipality"
+		},
+		{
+			"title" : "Org",
+			"item" : "org_abbr"		
+		}
+	],
+	"maps" : [
+		{
+			"item" : {
+				"lat" : "context:location:latitude", 
+				"lng" : "context:location:longitude"
+			},
+			"center" : [11.11, 123.7],
+			"zoom" : 7,
+			"clusteroptions" : {
+				"spiderfyOnMaxZoom": true,
+				"showCoverageOnHover": true,
+				"zoomToBoundsOnClick": true
+			},
+			"tilelayers": [
+				{
+					"title" : "Standard",
+					"key" : "BC9A493B41014CAABB98F0471D759707",
+					"styleId" : 1
+				},
+				{
+					"title" : "Road", 
+					"key" : "BC9A493B41014CAABB98F0471D759707",
+					"styleId" : 997,
+					"default" : true
+				},
+				{
+					"title" : "Minimal",
+					"key" : "BC9A493B41014CAABB98F0471D759707",
+					"styleId" : 22677
+				}		
+			] 
+		}
+	]
+}
