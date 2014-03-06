@@ -1,5 +1,4 @@
 body {
-  background-image: url('../images/grey.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -98,12 +97,12 @@ body {
   left: 50px;
   z-index: 99;
   display: none;
-  width: 200px;
+  width: 95%;
   height: 42px;
-  padding: 5px;
+  padding: 8px;
   padding-left: 40px;
   margin-left: -40px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #026bb5;
   border-radius: 5px;
 }
 
@@ -113,8 +112,9 @@ body {
   padding: 5px 0 0px 0px;
   margin: 5px 0 0px 0px;
   background-color: #fff;
-  background-image: url(../images/grid-18px-masked.png);
-  background-repeat: repeat-x;
+  opacity: .8;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
 }
 
 .wccontainer input {
@@ -248,7 +248,7 @@ body {
 #wcpanel {
   position: fixed;
   right: 3px;
-  top: 5px;
+  top: 75px;
   width: 350px;
 }
 
@@ -287,8 +287,9 @@ body {
   width: 400px;
   overflow: hidden;
   background-color: #fff;
-  background-image: url(../images/grid-18px-masked.png);
-  background-repeat: repeat-x;
+  opacity: .8;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
 }
 
 #piepanel .chart {
@@ -326,4 +327,45 @@ body {
   background-image: url('../images/icon_map.png');
   border-radius: 8px;
   box-shadow: 3px 3px 3px #888888;
+}
+
+/* OCHA Styles */
+.ocha-logo {
+  float: right;
+  margin-right: 5px;
+}
+h1 {
+  font-size: 20px;
+  display: inline-block;
+  line-height: 0;
+  color: #fff;
+  position: relative;
+  top:3px;
+  margin-left: 10px;
+}
+@media (max-width: 1270px) {
+h1 {
+  font-size: 15px;
+  }  
+}
+@media (max-width: 1043px) {
+h1 {
+  font-size: 12px;
+  }  
+}
+.well {
+  border: 0;
+-webkit-border-radius: 0; */
+-moz-border-radius: 0;
+border-radius: 0; */
+-webkit-box-shadow: 0; */
+}
+#source {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  opacity: .8;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
+  padding: 5px;
 }
