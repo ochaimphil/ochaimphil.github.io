@@ -57,7 +57,7 @@
 			},
 			"tilelayers": [
 				{
-					"url" : "http://mt{s}.googleapis.com/vt?lyrs=m@262000000&src=apiv3&hl=en-US&x={x}&y={y}&z={z}&style=47,37|smartmaps",
+					"url" : "http://mt0.googleapis.com/vt?lyrs=m@262000000&src=apiv3&hl=en-US&x={x}&y={y}&z={z}&style=47,37|smartmaps",
 					"title" : "Google Street"
 				},	
 				{
