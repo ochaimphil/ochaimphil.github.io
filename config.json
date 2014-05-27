@@ -58,23 +58,12 @@
 			"tilelayers": [
 				{
 					"url" : "http://mt0.googleapis.com/vt?lyrs=m@262000000&src=apiv3&hl=en-US&x={x}&y={y}&z={z}&style=47,37|smartmaps",
-					"title" : "Google Street"
+					"title" : "Google Street",
+					"default" : true
 				},	
 				{
-					"title" : "Standard (deprected)",
-					"key" : "BC9A493B41014CAABB98F0471D759707",
-					"styleId" : 1
-				},
-				{
-					"title" : "Road (deprected)", 
-					"key" : "BC9A493B41014CAABB98F0471D759707",
-					"styleId" : 997,
-					"default" : true
-				},
-				{
-					"title" : "Minimal (deprected)",
-					"key" : "BC9A493B41014CAABB98F0471D759707",
-					"styleId" : 22677
+					"url" : "http://mt0.googleapis.com/vt?lyrs=t@132,r@262250102&src=apiv3&hl=en-US&x={x}&y={y}&z={z}&style=47,37|smartmaps",
+					"title" : "Google Physical"
 				}		
 			] 
 		}
