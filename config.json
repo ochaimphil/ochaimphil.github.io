@@ -57,18 +57,21 @@
 			},
 			"tilelayers": [
 				{
-					"title" : "Standard",
+					"url" : "http://mt{s}.googleapis.com/vt?lyrs=m@262000000&src=apiv3&hl=en-US&x={x}&y={y}&z={z}&style=47,37|smartmaps",
+					"title" : "Google Street"
+				{
+					"title" : "Standard (deprected)",
 					"key" : "BC9A493B41014CAABB98F0471D759707",
 					"styleId" : 1
 				},
 				{
-					"title" : "Road", 
+					"title" : "Road (deprected)", 
 					"key" : "BC9A493B41014CAABB98F0471D759707",
 					"styleId" : 997,
 					"default" : true
 				},
 				{
-					"title" : "Minimal",
+					"title" : "Minimal (deprected)",
 					"key" : "BC9A493B41014CAABB98F0471D759707",
 					"styleId" : 22677
 				}		
