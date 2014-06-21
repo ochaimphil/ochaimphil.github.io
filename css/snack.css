@@ -112,9 +112,9 @@ body {
   padding: 5px 0 0px 0px;
   margin: 5px 0 0px 0px;
   background-color: #fff;
-  opacity: .8;
-  -webkit-opacity: .8;
-  -moz-opacity: .8;
+  opacity: .7;
+  -webkit-opacity: .7;
+  -moz-opacity: .7;
 }
 
 .wccontainer input {
@@ -286,10 +286,10 @@ body {
   left: 3px;
   width: 400px;
   overflow: hidden;
-  background-color: #fff;
-  opacity: .8;
-  -webkit-opacity: .8;
-  -moz-opacity: .8;
+  opacity: .7;
+  -webkit-opacity: .7;
+  -moz-opacity: .7;
+  background: url(../images/legend.png) 256px 20px no-repeat #fff;
 }
 
 #piepanel .chart {

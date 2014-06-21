@@ -874,7 +874,8 @@ oh.getcsvurl = function () {
     }
 })(jQuery);
 (function ($) {
-    var colorschema = ["#8DD3C7", "#BEBADA", "#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#FCCDE5", "#CCEBC5", "#FFED6F"];
+    //var colorschema = ["#8DD3C7", "#BEBADA", "#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#FCCDE5", "#CCEBC5", "#FFED6F"];
+    var colorschema = ["#003469", "#036cb6", "#659ad2", "#95b6df", "#c7d6ee", "#004416","#8b010e", "#f79433", "#511c74"];
     $.fn.piechart = function (options) {
         var target = this;
         var item = options.item;
@@ -894,7 +895,16 @@ oh.getcsvurl = function () {
             return false
         });
         mydiv.appendTo(target);
-        var mychart = dc.pieChart("#" + mydiv.attr("id")).width(180).height(180).radius(80).colors(colorschema).innerRadius(20).label(getlabel).dimension(dashboard.dim[item]).group(dashboard.groups[item]);
+        var mychart = 
+            dc.pieChart("#" + mydiv.attr("id"))
+                .width(220)
+                .height(220)
+                .radius(110)
+                .colors(colorschema)
+                .innerRadius(60)
+                .label(getlabel)
+                .renderLabel(false)
+                .dimension(dashboard.dim[item]).group(dashboard.groups[item]);
         dashboard.renderlet.init(mychart.renderlet);
         dashboard.piecharts = dashboard.piecharts || [];
         dashboard.piecharts.push(mychart);
@@ -1135,7 +1145,7 @@ oh.getcsvurl = function () {
                 }).style("font-family", font).style("fill", function (d, i) {
                     return fill(i)
                 }).attr("text-anchor", "middle").attr("transform", function (d) {
-                    return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"
+                    return "translate(" + [d.x, d.y] + ")"
                 }).text(function (d) {
                     return d.text
                 })
